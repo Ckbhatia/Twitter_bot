@@ -1,0 +1,14 @@
+{
+  "name": "twitter_bot",
+  "version": "1.0.0",
+  "description": "Twitter_bot",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "main": "index.js",
+  "author": "Chetan Kumar",
+  "license": "MIT",
+  "dependencies": {
+    "twit": "^2.2.11"
+  }
+}
