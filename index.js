@@ -1,18 +1,20 @@
 var Twit = require('twit')
 
+require("dotenv").config();
+
 // Create a instance of Twit
 var Twitter = new Twit({
-    consumer_key: 'pPCU9eZWBvHBhY5l5SBaaOR0S',
-    consumer_secret: '5453JXIL3ymwmOKpUSwdAmp2XpOv7SBmT1E8vizvR6uugTYGjy',
-    access_token: '837276241434652672-7PbU9TIcO2ePq6csR8rgwJrRqmf0CAH',
-    access_token_secret: 'mxMpFK2Olfx3fKe2zA6FfniCQJeNsrJOYIgM7EevwprVD',
+    consumer_key: process.env.consumer_key,
+    consumer_secret: process.env.consumer_key,
+    access_token: process.env.consumer_key,
+    access_token_secret: process.env.consumer_key,
     timeout_ms: 60 * 1000,
     strictSSL: true
 })
 
 var retweet = function () {
     var params = {
-        q: '#AltCampus', // Hashtags to search tweets within
+        q: '#codehelp, #codeshare, #codeask, #codechallenge', // Hashtags to search tweets within
         result_type: 'recent',
         lang: 'en'
     }
